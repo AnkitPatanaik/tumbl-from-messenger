@@ -11,8 +11,12 @@ var client = tumblr.createClient({
         token_secret: config.get('tokenSecret')
 });
 
-client.blogPosts('ankitpancakes', {type: 'photo'}, function(err, resp) {
-          console.log(resp.posts); // use them for something
+var options = {
+        caption: 'Test',
+        source: 'https://i.imgur.com/OBXukWT.jpg',
+};
+client.createPhotoPost('ankitpancakes', options, function() {
+    console.log('successfully posted picture');
 });
 
 //login with facebook 
