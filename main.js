@@ -19,14 +19,26 @@ login({
 
 //helpers below
 function loginCallback(err, api) {
-         if(err) return console.error(err);
-         console.log('hello world');
-         api.listen(function callback(err, message) {
-                 console.log('HELLO I AM HERE');
-                 if(isCommand(message)) {
-                         console.log('wya');
-                         var commandString = message.body.slice(8);
-                         console.log(commandString);
+        if(err) return console.error(err);
+        api.listen(function callback(err, message) {
+                if(isCommand(message)) {
+                        var commandString = message.body.slice(8);
+                        console.log(commandString);
+                        var cmdArray = commandString.split(',');
+                        var imgURL = cmdArray[0];
+                        var caption = cmdArray[1];
+                        console.log(imgURL);
+                        console.log(caption);
+                        
+                        //post pictures to tumblr
+                        var options = {
+                            caption: caption,
+                            source: imgURL,
+                        };
+
+                        client.createPhotoPost('ankitpancakes', options, function() {
+                            console.log('successfully posted picture');
+                        });
                  }
          });
 }
@@ -40,16 +52,3 @@ function isCommand(message) {
              return message.body.startsWith('/tumblr');
          }
 }
-
-//post pictures to tumblr
-var options = {
-        caption: 'Test',
-        source: 'https://i.imgur.com/OBXukWT.jpg',
-};
-
-/*
-client.createPhotoPost('ankitpancakes', options, function() {
-    console.log('successfully posted picture');
-});
-*/
-
