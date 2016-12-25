@@ -1,0 +1,19 @@
+{
+  "name": "tumbl-from-messenger",
+  "version": "1.0.0",
+  "description": "\"allows you to reblog pictures from messenger\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitPatanaik/tumbl-from-messenger.git"
+  },
+  "author": "Ankit Patanaik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnkitPatanaik/tumbl-from-messenger/issues"
+  },
+  "homepage": "https://github.com/AnkitPatanaik/tumbl-from-messenger#readme"
+}
