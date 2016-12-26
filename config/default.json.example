@@ -1,0 +1,11 @@
+{
+    "fbUsername": <your facebook login>, 
+    "fbPassword": <your facebook password>,
+    "messengerID": <your messenger id>,
+    "consumerKey": <your tumblr consumer key>,
+    "consumerSecret": <your tumblr consumer secret>,
+    "token": <your tumblr token>,
+    "tokenSecret": <your tumblr token secret>,
+    "tumblrUsername": <your tumblr username>
+}
+
