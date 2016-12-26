@@ -17,7 +17,7 @@ login({
     password: config.get('fbPassword')
     }, loginCallback);
 
-//
+//starts listening for a command 
 function loginCallback(err, api) {
     if(err) return console.error(err);
     //so that you read your own messages
