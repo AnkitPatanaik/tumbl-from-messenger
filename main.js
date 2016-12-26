@@ -23,7 +23,8 @@ function loginCallback(err, api) {
     //so that you read your own messages
     api.setOptions({selfListen: true});
     api.listen(function callback(err, message) {
-        if(isCommand(message)) {
+        console.log(message);
+        if(isCommand(message) && message.senderID == config.get('messengerID')) {
             var commandString = message.body.slice(8);
             var cmdArray = commandString.split(',');
             
@@ -36,7 +37,7 @@ function loginCallback(err, api) {
                 source: imgURL,
             };
 
-            client.createPhotoPost(config.get('tumblrUsername', options, function() {
+            client.createPhotoPost(config.get('tumblrUsername'), options, function() {
                 console.log('successfully posted picture');
             });
         }
