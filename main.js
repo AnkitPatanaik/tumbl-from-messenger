@@ -20,6 +20,7 @@ login({
 //helpers below
 function loginCallback(err, api) {
         if(err) return console.error(err);
+        api.setOptions({selfListen: true});
         api.listen(function callback(err, message) {
                 if(isCommand(message)) {
                         var commandString = message.body.slice(8);
