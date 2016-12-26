@@ -1,1 +1,9 @@
-Gonna make something so that you can reblog pictures from messenger (i.e. use with dailycute)
+#tumblr-from-messenger
+*A neat little messenger program that lets you reblog images to tumblr.*
+
+**Usage:** `/tumblr <image url>, <caption>` 
+
+**Installation:**
+
+> npm install 
+> node main.js
