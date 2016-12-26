@@ -4,7 +4,6 @@
 **Usage:** `/tumblr <image url>, <caption>` 
 
 **Installation:**
-
-> npm install 
-
-> node main.js
+  1. `Obtain correct credentials (tumblr username, tumblr keys, facebook login credentials, messenger ID) and fill out ./config/default.json accordingly`
+  2. `npm install`
+  3. `node main.js`
