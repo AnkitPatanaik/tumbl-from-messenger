@@ -1,4 +1,4 @@
-#tumbl-from-messenger
+# tumbl-from-messenger
 *A neat little messenger program that lets you reblog images to tumblr.*
 
 **Usage:** `/tumblr <image url>, <caption>` 
